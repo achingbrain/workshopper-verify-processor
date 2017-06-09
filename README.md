@@ -8,7 +8,7 @@ A verify processor that I've used in a few projects.
 npm install --save workshopper-verify-processor
 ```
 
-## Usage
+## Usage
 
 Pass the current exercise and a verification function to the output of this module.
 
@@ -31,7 +31,7 @@ The penultimate argument to an assertion is the name of a translation string.  A
 
 `pass.` or `fail.` will be prepended to your translation string so you should have a translation file similar to:
 
-```javscript
+```javascript
 {
   // ...
   "common": {
@@ -49,7 +49,7 @@ The penultimate argument to an assertion is the name of a translation string.  A
 
 or per-exercise:
 
-```javscript
+```javascript
 {
   // ...
   "exercises": {
@@ -69,7 +69,7 @@ The final argument to the assertion is an object with key/value pairs that are u
 
 If an assertion fails, the test is aborted and an error message is shown.
 
-### Adding custom validations
+### Adding custom validations
 
 To add custom assertions, add them to `verifyProcessor.assertions`
 
