@@ -7,8 +7,8 @@ const TestError = function (message) {
 TestError.prototype = Error.prototype
 
 module.exports = (exercise, verify) => {
-  const assert = (fn, message, context) => {
-    if (fn()) {
+  const assert = async (fn, message, context) => {
+    if (await fn()) {
       console.info(` ${chalk.green('✓')} ${exercise.i18n(`pass.${message}`, context)}`)
 
       return
@@ -33,9 +33,10 @@ module.exports = (exercise, verify) => {
       // it expects this many args
       const expected = verify.length
 
+      // these are the args
       const verificationArgs = args.slice(0, expected)
 
-      return assert(verify.bind(null, ...verificationArgs), args[expected], args[expected + 1])
+      return await assert(verify.bind(null, ...verificationArgs), args[expected], args[expected + 1])
     }.bind(null, module.exports.assertions[key])
   }
 

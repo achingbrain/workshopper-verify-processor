@@ -75,6 +75,8 @@ To add custom assertions, add them to `verifyProcessor.assertions`
 
 Any promises passed as arguments to assertion functions will be automatically resolved before the assertion function is called.
 
+Custom assertions can return either a boolean value or a promise that will eventually resolve to a boolean value.
+
 ```javascript
 const verifyProcessor = require('workshopper-verify-processor')
 
