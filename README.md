@@ -58,7 +58,7 @@ or per-exercise:
         "translation_string": "This assertion passed with key {{key}}"
       },
       "fail": {
-        "translation_string": "This assertion passed with key {{key}}"
+        "translation_string": "This assertion failed with key {{key}}"
       }
     }
   }
